@@ -1,5 +1,5 @@
-#ifndef Square
-#define Square
+#ifndef SQUARE_H
+#define SQUARE_H
 #include "Shape.h"
 
 class Square:public Shape

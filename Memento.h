@@ -3,7 +3,7 @@
 #include "Shape.h"
 
 class Memento{
-    Shape shapes;
+    Shape* shapes;
     
     public:
           Memento(Shape* elements);
