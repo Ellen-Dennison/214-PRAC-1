@@ -1,4 +1,4 @@
-#include<list>
+#include <list>
 #include "CareTaker.h"
 #include "Memento.h"
 using namespace std;
