@@ -8,4 +8,5 @@ class Memento{
     public:
           Memento(Shape* elements);
 };
+
 #endif
