@@ -4,7 +4,7 @@
 
 class Memento{
     Shape* shapes;
-    
+    friend class Canvas;
     public:
           Memento(Shape* elements);
 };

@@ -1,4 +1,3 @@
-#include<iostream>
 #include "Canvas.h"
 #include "Memento.h"
 using namespade std;
@@ -8,6 +7,6 @@ Memento* Canvas::captureCurrent(){
 }
 
 void Canvas::undoAction(Memento* prev){
-    this->shapes = prev;
+    this->shapes = prev->shapes;
 }
 

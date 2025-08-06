@@ -7,7 +7,6 @@ class Canvas{
     public:
         Memento* captureCurrent();
         void undoAction(Memento* prev);
-          
 };
 
 #endif
