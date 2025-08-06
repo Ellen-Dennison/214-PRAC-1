@@ -5,10 +5,14 @@
 class Rectangle:public Shape
 {  
   private:
-
+  int length;
+  int width;
+  string colour;
+  int position_x;
+  int position_y;
 
   public:
-  int length;
+  virtual Shape* clone();
 };
 
 #endif 

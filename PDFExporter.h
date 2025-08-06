@@ -2,7 +2,9 @@
 #define PDFEXPORTER_H
 #include "ExportCanvas.h"
 
-class PDFExporter : public ExportCanvas{
+class PDFExporter : public ExportCanvas
+{   
+    private:
     void saveToFile();
 };
 #endif
