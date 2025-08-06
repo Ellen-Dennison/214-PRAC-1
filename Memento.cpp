@@ -2,6 +2,7 @@
 #include "Shape.h"
 
 
-Memento::Memento(Shape* shapes){
+Memento::Memento(Shape* shapes)
+{
     this->shapes = shapes;
 }

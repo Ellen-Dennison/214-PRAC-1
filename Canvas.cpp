@@ -1,12 +1,14 @@
 #include "Canvas.h"
 #include "Memento.h"
-using namespade std;
+using namespace std;
 
-Memento* Canvas::captureCurrent(){
+Memento* Canvas::captureCurrent()
+{
     Memento* currentShapes  = new Memento(shapes);
 }
 
-void Canvas::undoAction(Memento* prev){
+void Canvas::undoAction(Memento* prev)
+{
     this->shapes = prev->shapes;
 }
 
