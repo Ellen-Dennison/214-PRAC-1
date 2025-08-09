@@ -14,6 +14,8 @@ class Rectangle:public Shape
   int position_y;
 
   public:
+  Rectangle():Shape()
+  {};
   virtual Shape* clone();
 };
 

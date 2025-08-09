@@ -2,7 +2,9 @@
 #define EXPORTCANVAS_H
 #include "Canvas.h"
 
-class ExportCanvas{
+class ExportCanvas
+{
+
     Canvas* canvas;
 
     void prepareCanvas();
@@ -10,6 +12,6 @@ class ExportCanvas{
     virtual void saveToFile() = 0;
 
     public:
-    void exportTofile();
+    void exportToFile();
 };
 #endif
