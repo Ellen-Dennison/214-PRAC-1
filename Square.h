@@ -14,6 +14,7 @@ class Square:public Shape
   int position_y;
 
   public:
+  Square();
   virtual Shape* clone();
   
 };
