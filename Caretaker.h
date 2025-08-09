@@ -8,7 +8,7 @@ class CareTaker{
     list<Memento*> mementoList;
 
     public:
-            void add(Memento* state); //adding a memento to the list
-            Memento* getState(int index); //getting a specific memento from the list
+            void add(Memento* shape); //adding a memento to the list
+            Memento* getShape(int index); //getting a specific memento from the list
 };
 #endif
