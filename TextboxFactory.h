@@ -1,8 +1,8 @@
-#ifndef TEXTBOOKFACTORY_H
-#define TEXTBOOKFACTORY_H
+#ifndef TEXTBOXFACTORY_H
+#define TEXTBOXFACTORY_H
 #include "ShapeFactory.h"
 
-class TextBookFactory:public ShapeFactory
+class TextboxFactory:public ShapeFactory
 {
    public:
    virtual Shape* createshape();
