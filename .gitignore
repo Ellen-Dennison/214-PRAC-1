@@ -1,2 +1,4 @@
 .vscode/** 
 *.json
+/.vscode
+.vscode/c_cpp_properties.json

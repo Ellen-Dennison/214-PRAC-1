@@ -4,7 +4,9 @@
 
 class PNGExporter:public ExportCanvas
 { 
-  private:
-  void saveTofile();
+    private:
+    virtual void prepareCanvas();
+    virtual void renderElements();
+    virtual void saveToFile();
 };
 #endif 

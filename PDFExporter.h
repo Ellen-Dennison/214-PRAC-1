@@ -5,6 +5,8 @@
 class PDFExporter : public ExportCanvas
 {   
     private:
-    void saveToFile();
+    virtual void prepareCanvas();
+    virtual void renderElements();
+    virtual void saveToFile();
 };
 #endif

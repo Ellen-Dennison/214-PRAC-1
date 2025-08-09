@@ -13,6 +13,7 @@ Shape* Canvas::getShape(){//returns the current state of the object
 Memento* Canvas::captureCurrent() //saves the state
 {
     Memento* currentShapes  = new Memento(shapes);
+    return currentShapes;
 }
 
 void Canvas::undoAction(Memento* prev)//returns the last saved state
@@ -20,3 +21,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes;
 }
 
+Canvas::Canvas(int length, int width, string colour, int position_x,int position_y, string text = " ")
+{
+   //shapes()
+}

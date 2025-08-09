@@ -2,14 +2,15 @@
 #define EXPORTCANVAS_H
 #include "Canvas.h"
 
-class ExportCanvas{
+class ExportCanvas:public Canvas
+{
+    private:
     Canvas* canvas;
-
-    void prepareCanvas();
-    void renderElements();
+    virtual void prepareCanvas() = 0;
+    virtual void renderElements() = 0;
     virtual void saveToFile() = 0;
 
     public:
-    void export();
+    void exportToFile();
 };
 #endif

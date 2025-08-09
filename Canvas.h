@@ -2,13 +2,14 @@
 #define CANVAS_H
 #include "Shape.h"
 #include "Memento.h"
-class Canvas{
+class Canvas
+{
     Shape* shapes;
+
     public:
-        void setShape(Shape* shapes); //setting the current "state"
-        Shape* getShape(); //returns the current "state" that has not been saved
-        Memento* captureCurrent();
-        void undoAction(Memento* prev);
+    Canvas(int length, int width, string colour, int position_x,int position_y, string text = " ");
+    Memento* captureCurrent();
+    void undoAction(Memento* prev);
 };
 
 #endif
