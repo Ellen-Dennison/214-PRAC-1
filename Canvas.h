@@ -7,7 +7,7 @@ class Canvas
     Shape* shapes;
 
     public:
-    Canvas(string type, int length, int width, string colour, int position_x,int position_y, string text = " ");
+    Canvas(char kind,int length, int width, std::string colour, int position_x,int position_y);
     Memento* captureCurrent();
     void undoAction(Memento* prev);
 };
