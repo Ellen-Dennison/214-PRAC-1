@@ -7,7 +7,7 @@ class SqaureFactory:public ShapeFactory
    public:
    virtual Shape* createshape();
    virtual void toString();
-  
+   
 };
 
 #endif

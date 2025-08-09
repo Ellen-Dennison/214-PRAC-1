@@ -7,7 +7,7 @@ class Canvas
     Shape* shapes;
 
     public:
-    Canvas(int length, int width, string colour, int position_x,int position_y, string text = " ");
+    Canvas(string type, int length, int width, string colour, int position_x,int position_y, string text = " ");
     Memento* captureCurrent();
     void undoAction(Memento* prev);
 };

@@ -1,7 +1,6 @@
-#include "Shape.h"
-#include <iostream>
+#include "ShapeFactory.h"
 
-Shape::Shape(int length, int width, std::string colour, int position_x, int position_y)
+ShapeFactory::ShapeFactory(int length, int width, std::string colour, int position_x, int position_y)
 {
     this->length = length;
     this->width = width;
