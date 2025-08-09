@@ -10,6 +10,6 @@ class ExportCanvas{
     virtual void saveToFile() = 0;
 
     public:
-    void export();
+    void exportTofile();
 };
 #endif
