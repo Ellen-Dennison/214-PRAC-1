@@ -2,7 +2,7 @@
 #define EXPORTCANVAS_H
 #include "Canvas.h"
 
-class ExportCanvas
+class ExportCanvas:public Canvas
 {
     private:
     Canvas* canvas;

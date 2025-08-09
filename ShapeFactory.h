@@ -1,6 +1,7 @@
 #ifndef SHAPEFACTORY_H
 #define SHAPEFACTORY_H
-#include "Shape.h"
+#include "Canvas.h"
+
 
 class ShapeFactory
 {  
