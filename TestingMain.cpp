@@ -13,13 +13,13 @@ int main(){
     //Testing the memento part of the system
     Shape* shapes1 = new Rectangle(10,5,"green",3,6);
     Shape* shapes2 = new Square(3,8,"red",8,8);
-    Canvas canvas1 = new Canvas();
+    Canvas canvas1;
 
 
     canvas1.setShape(shapes1);//setting current state
     canvas1.setShape(shapes2); //current state is now shapes2
 
-    CareTaker list = new CareTaker();
+    CareTaker list;
     list.add(canvas1.captureCurrent());//saves current shape/state then adds to the list
 
     Shape* shapes3 = new Rectangle(5,5,"yellow",6,6);

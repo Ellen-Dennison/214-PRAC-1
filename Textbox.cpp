@@ -1,5 +1,5 @@
-#include 'Textbox.h'
-#include "Shape"
+#include"Textbox.h"
+#include "Shape.h"
 
 Textbox::Textbox(int length, int width, std::string colour, int position_x, int position_y, std::string text = " "){
     this.length = length;
@@ -12,4 +12,8 @@ Textbox::Textbox(int length, int width, std::string colour, int position_x, int 
 
 Shape* Textbox::clone(){
     return new Textbox(*this);
+}
+
+std::string Textbox::getText(){
+    return text;
 }

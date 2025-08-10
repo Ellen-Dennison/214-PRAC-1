@@ -1,11 +1,11 @@
 #ifndef CARETAKER_H
 #define CARETAKER_H
 #include "Memento.h"
-#include<list>
+#include<vector>
 using namespace std;
 
 class CareTaker{
-    list<Memento*> mementoList;
+    vector<Memento*> mementoList;
 
     public:
             void add(Memento* shape); //adding a memento to the list

@@ -15,6 +15,7 @@ class Textbox:public Shape
   public:
   virtual Shape* clone();
   Textbox(int length, int width, std::string colour, int position_x, int position_y, std::string text = " ");
+  std::string getText();
 };
 
 
