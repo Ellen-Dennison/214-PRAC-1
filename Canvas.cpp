@@ -25,7 +25,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes;
 }
 
-Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
+Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
 {
    //shapes()
    if (kind == 'r')
@@ -37,11 +37,15 @@ Canvas::Canvas(char kind, int length, int width, string colour, int position_x,i
    }
    else if (kind == 's')
    {
-
+      SqaureFactory s1(length, width,colour,position_x,position_y) ;
+      s1.createshape();
+      s1.toString();
    }
    else if (kind == 't')
    {
-    
+      TextboxFactory t1(length, width,colour,position_x,position_y,txt);
+      t1.createshape();
+      t1.toString();
    }
 
 }
