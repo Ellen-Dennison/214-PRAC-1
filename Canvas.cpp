@@ -36,9 +36,13 @@ Canvas::Canvas(char kind, int length, int width, string colour, int position_x,i
       
    }
    else if (kind == 's')
-   {}
+   {
+
+   }
    else if (kind == 't')
-   {}
+   {
+    
+   }
 
 }
 
