@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-/* void Canvas::setShape(Shape* shapes){//this function sets the current "state" of the object, unsaved
+void Canvas::setShape(Shape* shapes){//this function sets the current "state" of the object, unsaved
     this->shapes = shapes;
 }
 
@@ -24,7 +24,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
 {
     this->shapes = prev->shapes;
 }
- */
+
 Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
 {
    //shapes()
