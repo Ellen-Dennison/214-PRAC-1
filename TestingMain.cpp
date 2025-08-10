@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-#include <iostream>
-#include <string>
-#include "Canvas.h"
-
-int main()
-{  
-   std::string colour = "blue";
-   char kind = 'r';
-   Canvas c1(kind,2,3,colour,3,5);
-   
-
-   
-}
-=======
 #include<iostream>
 #include "Canvas.h"
 #include "Rectangle.h"
@@ -69,6 +54,20 @@ int main(){
     cout<<"Position_y: "<<canvas1.getShape()->position_y<<endl;
     cout<<"------------------------------------------------------------------------------------------------------------\n";
 
+    //!TESTING THE FACTORIES
+    int length = 6;
+    int width = 6;
+    std::string colour = "blue";
+    int position_x = 2;
+    int position_y = 2;
+    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
+    Shape *new2 = new1->clone();
+
+    delete new1;
+    delete new2;
+
+    Canvas *newCanvas = new Canvas('t',length,  width, colour, position_x, position_y, "Hello");
+    delete newCanvas;
+
     return 0;
 }
->>>>>>> c5db502506158f314eba519a76a3dda6493f57cb
