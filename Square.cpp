@@ -10,6 +10,7 @@ Square::Square(int length, int width, std::string colour, int position_x, int po
     this->position_y = position_y;
 }
 
-Shape* Square::clone(){
+Shape* Square::clone()
+{
     return new Square(*this);
 }

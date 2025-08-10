@@ -8,8 +8,8 @@
     this.position_y = position_y;
 } */
 
- int Shape::getLength()
- { return length; }
+  int Shape::getLength()
+  { return length; }
 
   int Shape::getWidth()
   { return width; }
