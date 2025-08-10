@@ -15,7 +15,7 @@ class Rectangle:public Shape
 
   public:
   virtual Shape* clone();
-  
+  Rectangle(int length, int width, std::string colour, int position_x, int position_y);
 };
 
 #endif 

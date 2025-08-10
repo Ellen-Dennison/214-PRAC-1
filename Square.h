@@ -15,6 +15,7 @@ class Square:public Shape
 
   public:
   virtual Shape* clone();
+  Square(int length, int width, std::string colour, int position_x, int position_y);
   
 };
 
