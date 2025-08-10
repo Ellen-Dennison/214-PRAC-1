@@ -25,7 +25,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes;
 }
 
-Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
+/*Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
 {
    //shapes()
    if (kind == 'r')
@@ -40,5 +40,6 @@ Canvas::Canvas(char kind, int length, int width, string colour, int position_x,i
    else if (kind == 't')
    {}
 
-}
+}*/
 
+Canvas::Canvas(){}
