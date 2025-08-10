@@ -8,6 +8,7 @@ class Memento{
     public:
           Memento(Shape* elements);
           Shape* getShape();
+          ~Memento();
 };
 
 #endif

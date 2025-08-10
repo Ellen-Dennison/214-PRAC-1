@@ -8,7 +8,9 @@ class CareTaker{
     vector<Memento*> mementoList;
 
     public:
+            CareTaker();
             void add(Memento* shape); //adding a memento to the list
             Memento* getShape(int index); //getting a specific memento from the list
+            ~CareTaker();
 };
 #endif

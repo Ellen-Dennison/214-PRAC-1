@@ -13,4 +13,11 @@ Memento* CareTaker::getShape(int index)
     return mementoList[index];
 }
 
+CareTaker::CareTaker(){}
+
+// In CareTaker.h
+CareTaker::~CareTaker() {
+    for (Memento* m : mementoList) delete m;
+}
+
 

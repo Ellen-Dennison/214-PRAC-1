@@ -14,7 +14,7 @@ Square.o: Square.cpp Square.h
 	g++ -c Square.cpp
 
 Textbox.o: Textbox.cpp Textbox.h
-	g++ -c Textbox.xpp
+	g++ -c Textbox.cpp
 
 Canvas.o: Canvas.cpp Canvas.h
 	g++ -c Canvas.cpp
