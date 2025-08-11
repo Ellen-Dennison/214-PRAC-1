@@ -91,17 +91,6 @@ int main()
     
     //!TESTING THE FACTORIES
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    int length = 6;
-    int width = 6;
-    std::string colour = "blue";
-    int position_x = 2;
-    int position_y = 2;
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
-    Shape *new2 = new1->clone();
-
-    delete new1;
-    delete new2;
-
     Canvas *newCanvas = new Canvas();
     newCanvas->createFactory('t',length,  width, colour, position_x, position_y, "Hello");
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y);
