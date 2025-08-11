@@ -1,8 +1,8 @@
 run: TestingMain
 	./TestingMain
 
-TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o
-	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o -o TestingMain
+TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o ShapeFactory.o SquareFactory.o TextboxFactory.o
+	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o ShapeFactory.o SquareFactory.o TextboxFactory.o -o TestingMain
 
 TestingMain.o: TestingMain.cpp Canvas.h Shape.h Memento.h CareTaker.h
 	g++ -c TestingMain.cpp
@@ -15,6 +15,24 @@ RectangleFactory.o: RectangleFactory.cpp RectangleFactory.h
 	
 Square.o: Square.cpp Square.h
 	g++ -c Square.cpp
+
+ExportCanvas.o: ExportCanvas.cpp ExportCanvas.h
+	g++ -c ExportCanvas.cpp
+
+PDFExporter.o: PDFExporter.cpp PDFExporter.h
+	g++ -c PDFExporter.cpp
+
+PNGExporter.o: PNGExporter.cpp PNGExporter.h
+	g++ -c PNGExporter.cpp
+
+ShapeFactory.o: ShapeFactory.cpp ShapeFactory.h
+	g++ -c ShapeFactory.cpp
+
+SquareFactory.o: SquareFactory.cpp SquareFactory.h
+	g++ -c SquareFactory.cpp
+
+TextboxFactory.o: TextboxFactory.cpp TextboxFactory.h
+	g++ -c TextboxFactory.cpp
 
 Textbox.o: Textbox.cpp Textbox.h
 	g++ -c Textbox.cpp

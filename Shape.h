@@ -15,7 +15,6 @@ class Shape
   public:
   Shape(int length, int width, std::string colour, int position_x, int position_y);
   virtual Shape* clone() = 0;
-  Shape(int length, int width, std::string colour, int position_x, int position_y);
 
   int getLength();
   int getWidth();
