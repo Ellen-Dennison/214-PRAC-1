@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {   
     //!TESTING THE PROTOTYPE
-    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+    /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     int length = 6;
     int width = 6;
     std::string colour = "blue";
@@ -34,7 +34,7 @@ int main()
     delete new1;
     delete new2;
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-
+*/
     //!Testing the memento part of the system
     //declaring
     Canvas* canvas1 = new Canvas();
@@ -77,7 +77,8 @@ int main()
     }
 
     //getting previous state
-    canvas1->undoAction(storage->getShape(0));
+    cout << "Memento list size: " << storage->getSize() << endl;
+    /*canvas1->undoAction(storage->getShape(0));
     cout<<"Previous state of the canvas: "<<endl;
     
     if (Shape* current = canvas1->getShape()) {
@@ -88,13 +89,13 @@ int main()
         cout << "Position_x: " << current->getPosition_x() << endl;
         cout << "Position_y: " << current->getPosition_y() << endl;
         cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    }
+    }*/
 
     delete storage;
     delete canvas1;
     
     //!TESTING THE FACTORIES
-    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+    /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     Canvas *newCanvas = new Canvas();
     newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type, "Hello");
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y,type);
@@ -114,7 +115,7 @@ int main()
     { ext = new PNGExporter(); }
     ext->exportToFile();
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-
+*/
     return 0; 
 
 

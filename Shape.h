@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 #include <iostream>
+#include "Shape.h"
 #include <string> 
 
 class Shape
