@@ -10,11 +10,12 @@ class Textbox:public Shape
   std::string colour;
   int position_x;
   int position_y;
+  std::string type;
   std::string text;
 
   public:
   virtual Shape* clone();
-  Textbox(int length, int width, std::string colour, int position_x, int position_y, std::string text);
+  Textbox(int length, int width, std::string colour, int position_x, int position_y, std::string type, std::string text);
   std::string getText();
   
 };

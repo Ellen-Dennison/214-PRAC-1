@@ -23,8 +23,8 @@ int main()
     //declaring
 
     Canvas* canvas1 = new Canvas();
-    Shape* square = new Square(6,6,"yellow",8,8);
-    Shape* rectangle = new Rectangle(7,8,"red",10,7);
+    Shape* square = new Square(6,6,"yellow",8,8,"square");
+    Shape* rectangle = new Rectangle(7,8,"red",10,7,"rectangle");
     CareTaker* storage = new CareTaker();
 
     //calling functions
@@ -35,6 +35,7 @@ int main()
     cout<<"Current state of the canvas: "<<endl;
     
     if (Shape* current = canvas1->getShape()) {
+        cout<<"Shape Type: "<<current->getType()<<endl;
         cout << "Length: " << current->getLength() << endl;
         cout << "Width: " << current->getWidth() << endl;
         cout << "Colour: " << current->getColour() << endl;
@@ -44,12 +45,13 @@ int main()
     }
 
     //adding another state
-    Shape* textbox = new Textbox(7,7,"white",5,6,"Hello World");
+    Shape* textbox = new Textbox(7,7,"white",5,6,"textbox","Hello World");
     canvas1->setShape(textbox);//3rd state
     storage->add(canvas1->captureCurrent());//adding 3rd state to vector, current and saved state
     cout<<"Current state of the canvas: "<<endl;
     
     if (Shape* current = canvas1->getShape()) {
+        cout<<"Shape Type: "<<current->getType()<<endl;
         cout << "Length: " << current->getLength() << endl;
         cout << "Width: " << current->getWidth() << endl;
         cout << "Colour: " << current->getColour() << endl;
@@ -64,6 +66,7 @@ int main()
     cout<<"Previous state of the canvas: "<<endl;
     
     if (Shape* current = canvas1->getShape()) {
+        cout<<"Shape Type: "<<current->getType()<<endl;
         cout << "Length: " << current->getLength() << endl;
         cout << "Width: " << current->getWidth() << endl;
         cout << "Colour: " << current->getColour() << endl;
@@ -84,16 +87,16 @@ int main()
     std::string colour = "blue";
     int position_x = 2;
     int position_y = 2;
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
+    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y,type);
     Shape *new2 = new1->clone();
 
     delete new1;
     delete new2;
 
     Canvas *newCanvas = new Canvas();
-    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, "Hello");
-    newCanvas->createFactory('r',length,  width, colour, position_x, position_y);
-    newCanvas->createFactory('s',length,  width, colour, position_x, position_y);
+    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type "Hello");
+    newCanvas->createFactory('r',length,  width, colour, position_x, position_y,type);
+    newCanvas->createFactory('s',length,  width, colour, position_x, position_y,type);
     delete newCanvas;
 
     //!TESTING THE TEMPLATE METHOD

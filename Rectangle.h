@@ -12,10 +12,11 @@ class Rectangle:public Shape
   std::string colour;
   int position_x;
   int position_y;
+  std::string type;
 
   public:
   virtual Shape* clone();
-  Rectangle(int length, int width, std::string colour, int position_x, int position_y);
+  Rectangle(int length, int width, std::string colour, int position_x, int position_y,std::string type);
 };
 
 #endif 

@@ -11,9 +11,10 @@ class Shape
   std::string colour;
   int position_x;
   int position_y;
+  std::string type;
 
   public:
-  Shape(int length, int width, std::string colour, int position_x, int position_y);
+  Shape(int length, int width, std::string colour, int position_x, int position_y, std::string type);
   virtual Shape* clone() = 0;
 
   int getLength();
@@ -21,8 +22,10 @@ class Shape
   std::string getColour();
   int getPosition_x();
   int getPosition_y();
+  std::string getType();
 
   virtual void setLength(int length);
+  virtual void setType(std::string type);
   virtual void setWidth(int width);
   virtual void setColour(std::string colour);
   virtual void setPosition_x(int position_x);

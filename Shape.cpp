@@ -7,6 +7,10 @@
 int Shape::getLength()
 { return length; }
 
+std::string Shape::getType(){
+      return type;
+}
+
 int Shape::getWidth()
 { return width; }
 
@@ -34,4 +38,7 @@ void  Shape::setPosition_x(int position_x)
 
 void Shape::setPosition_y(int position_y)
 { this->position_y = position_y; }
-  
+
+void Shape::setType(std::string type){
+      this->type = type;
+}

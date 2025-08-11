@@ -7,6 +7,6 @@ Shape* Rectangle::clone()
 
 }
 
-Rectangle::Rectangle(int length, int width, std::string colour, int position_x, int position_y)
-           : Shape(length,width,colour,position_x,position_y){}
+Rectangle::Rectangle(int length, int width, std::string colour, int position_x, int position_y,type)
+           : Shape(length,width,colour,position_x,position_y,type){}
            

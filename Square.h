@@ -12,10 +12,11 @@ class Square:public Shape
   std::string colour;
   int position_x;
   int position_y;
-
+  std::string type;
+  
   public:
   virtual Shape* clone();
-  Square(int length, int width, std::string colour, int position_x, int position_y);
+  Square(int length, int width, std::string colour, int position_x, int position_y, std::string type);
   
 };
 
