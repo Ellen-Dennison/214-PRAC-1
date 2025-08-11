@@ -95,5 +95,19 @@ int main()
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y);
     newCanvas->createFactory('s',length,  width, colour, position_x, position_y);
     delete newCanvas;
+
+    //!TESTING THE TEMPLATE METHOD
+    std::string type;
+    ExportCanvas *ext;
+    std:: cout << "what file type would you like to export to\n";
+    std::cin >> type;
+    if (type == "PDF")
+    { ext = new PDFExporter(); }
+    else if (type == "PNG")
+    { ext = new PNGExporter(); }
+    ext->exportToFile();
+    
     return 0; 
+
+
 }
