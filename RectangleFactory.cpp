@@ -13,7 +13,7 @@ RectangleFactory::RectangleFactory(int length, int width, std::string colour, in
 
 Shape* RectangleFactory::createshape()
 {   
-    Rectangle *r1 = new Rectangle(this->length,this->width,this->colour,this->position_x,this->position_y);
+    r1 = new Rectangle(this->length,this->width,this->colour,this->position_x,this->position_y);
     return r1;
 }
 
@@ -44,4 +44,8 @@ void RectangleFactory::toString()
    
 }
 
-
+RectangleFactory::~RectangleFactory()
+{
+   if(!NULL)
+   {delete r1;}
+}

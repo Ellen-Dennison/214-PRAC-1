@@ -17,7 +17,7 @@ TextboxFactory::TextboxFactory(int length, int width, std::string colour, int po
 Shape* TextboxFactory::createshape()
 {
 
-    Textbox *t1 = new Textbox(this->length,this->width,this->colour,this->position_x,this->position_y, this->text);
+    t1 = new Textbox(this->length,this->width,this->colour,this->position_x,this->position_y, this->text);
     return t1;
 
 }
@@ -39,4 +39,10 @@ void TextboxFactory::toString()
     //std::cout << " ";
 
 
+}
+
+TextboxFactory::~TextboxFactory()
+{
+   if(!NULL)
+   {delete t1;}
 }

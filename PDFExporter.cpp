@@ -1,9 +1,8 @@
 #include "PDFExporter.h"
+#include <iostream>
     
-void PDFExporter::prepareCanvas()
-{}
-void PDFExporter::renderElements()
-{}
 
 void PDFExporter::saveToFile()
-{}
+{
+    std::cout << "Your file is ready\n"; 
+}
