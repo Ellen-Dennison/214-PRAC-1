@@ -36,9 +36,9 @@ Memento* Canvas::captureCurrent() //saves the state
 
 void Canvas::undoAction(Memento* prev)//returns the last saved state
 {
-    if(shapes){
-        delete shapes;
-    }
+    //if(shapes){
+        //delete shapes;
+    //}
     this->shapes = prev->shapes->clone();
 }
 
