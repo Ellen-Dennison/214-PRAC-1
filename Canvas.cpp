@@ -6,7 +6,8 @@
 #include <iostream>
 using namespace std;
 
-void Canvas::setShape(Shape* newShape) {
+void Canvas::setShape(Shape* newShape) 
+{
     if (!newShape) return;  // Safety check
 
     if (!shapes) {
@@ -39,7 +40,6 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
 }
 
 Canvas::Canvas()
-/*Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
 {
    //shapes()
    
@@ -68,8 +68,7 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
       t1.toString();
    }
 
-}*/
+}
 
 // In Canvas.cpp
-Canvas::Canvas() : shapes(nullptr) {}  // Initialize to nullptr
-}
+//Canvas::Canvas() : shapes(nullptr) {}  // Initialize to nullptr
