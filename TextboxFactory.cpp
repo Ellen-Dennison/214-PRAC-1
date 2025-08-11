@@ -1,7 +1,7 @@
 #include "TextboxFactory.h"
 
 
-TextboxFactory::TextboxFactory(int length, int width, std::string colour, int position_x,int position_y, std::string text)
+TextboxFactory::TextboxFactory(int length, int width, std::string colour, int position_x,int position_y, std::string type, std::string text)
 {
 
     this->length = length;
@@ -9,6 +9,7 @@ TextboxFactory::TextboxFactory(int length, int width, std::string colour, int po
     this->colour = colour;
     this->position_x = position_x;
     this->position_y = position_y;
+    this->type = type;
     this->text = text;
 
 }
@@ -17,7 +18,7 @@ TextboxFactory::TextboxFactory(int length, int width, std::string colour, int po
 Shape* TextboxFactory::createshape()
 {
 
-    t1 = new Textbox(this->length,this->width,this->colour,this->position_x,this->position_y, this->text);
+    t1 = new Textbox(this->length,this->width,this->colour,this->position_x,this->position_y, this->type, this->text);
     return t1;
 
 }

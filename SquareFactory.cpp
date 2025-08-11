@@ -1,18 +1,19 @@
 #include "SquareFactory.h"
 
-SqaureFactory::SqaureFactory(int length, int width, std::string colour, int position_x,int position_y)
+SqaureFactory::SqaureFactory(int length, int width, std::string colour, int position_x,int position_y, std::string type)
 {
     this->length = length;
     this->width = width;
     this->colour = colour;
     this->position_x = position_x;
     this->position_y = position_y;
+    this->type = type;
     
 }
 
 Shape* SqaureFactory::createshape()
 {
-    s1 = new Square(this->length,this->width,this->colour,this->position_x,this->position_y);
+    s1 = new Square(this->length,this->width,this->colour,this->position_x,this->position_y,this->type);
     return s1;
 }
 

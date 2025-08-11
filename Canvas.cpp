@@ -42,11 +42,11 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes->clone();
 }
 
-void Canvas::createFactory(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
+void Canvas::createFactory(char kind, int length, int width, string colour, int position_x,int position_y,std::string type, std::string txt)
 {
    if (kind == 'r')
    {
-      RectangleFactory r1(length, width,colour,position_x,position_y) ;
+      RectangleFactory r1(length, width,colour,position_x,position_y,type) ;
       r1.createshape();
       r1.toString();
       //delete r1;
@@ -54,7 +54,7 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
    }
    else if (kind == 's')
    {
-      SqaureFactory s1(length, width,colour,position_x,position_y) ;
+      SqaureFactory s1(length, width,colour,position_x,position_y,type) ;
       s1.createshape();
       s1.toString();
       //delete s1;
@@ -62,7 +62,7 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
    }
    else if (kind == 't')
    {
-      TextboxFactory t1(length, width,colour,position_x,position_y,txt);
+      TextboxFactory t1(length, width,colour,position_x,position_y, type,txt);
       t1.createshape();
       t1.toString();
 

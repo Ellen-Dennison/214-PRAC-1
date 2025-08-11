@@ -25,7 +25,8 @@ int main()
     std::string colour = "blue";
     int position_x = 2;
     int position_y = 2;
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y,type);
+    std::string type = "Rectangle";
+    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y, type);
     Shape *new2 = new1->clone();
     std::cout << "NEW1 COLOUR" << new1->getColour() << std::endl;
     std::cout << "NEW2 COLOUR AFTER USING THE CLONE METHOD" << new2->getColour() << std::endl;
@@ -96,7 +97,7 @@ int main()
     //!TESTING THE FACTORIES
     /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     Canvas *newCanvas = new Canvas();
-    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type "Hello");
+    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type, "Hello");
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y,type);
     newCanvas->createFactory('s',length,  width, colour, position_x, position_y,type);
     delete newCanvas;
@@ -104,13 +105,13 @@ int main()
 
     //!TESTING THE TEMPLATE METHOD
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    std::string type;
+    std::string typ;
     ExportCanvas *ext;
     std:: cout << "what file type would you like to export to\n";
-    std::cin >> type;
-    if (type == "PDF")
+    std::cin >> typ;
+    if (typ == "PDF")
     { ext = new PDFExporter(); }
-    else if (type == "PNG")
+    else if (typ == "PNG")
     { ext = new PNGExporter(); }
     ext->exportToFile();
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
