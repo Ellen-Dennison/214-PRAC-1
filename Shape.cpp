@@ -1,8 +1,16 @@
 #include "Shape.h"
-#include<string>
 
-  int Shape::getLength()
-  { return length; }
+Shape::Shape(int length, int width, std::string colour, int position_x, int position_y)
+{
+    this->length = length;
+    this->width = width;
+    this->colour = colour;
+    this->position_x = position_x;
+    this->position_y = position_y;
+} 
+
+ int Shape::getLength()
+ { return length; }
 
   int Shape::getWidth()
   { return width; }
@@ -17,24 +25,4 @@
 
   int Shape::getPosition_y(){
     return position_y;
-  }
-
-  void Shape::setLength(int length){
-    this->length = length;
-  }
-
-  void Shape::setWidth(int width){
-    this->width = width;
-  }
-
-  void Shape::setColour(std::string colour){
-    this->colour = colour;
-  }
-
-  void Shape::setPosition_x(int position_x){
-    this->position_x = position_x;
-  }
-
-  void Shape::setPosition_y(int position_y){
-    this->position_y = position_y;
   }

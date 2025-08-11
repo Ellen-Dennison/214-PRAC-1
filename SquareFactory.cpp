@@ -19,26 +19,26 @@ Shape* SqaureFactory::createshape()
 void SqaureFactory::toString()
 {
 
-    std::cout << "This is your Sqaure\n";
-    std::cout << " ";
+    std::cout << "\nThis is your Sqaure\n ";
+    //std::cout << " ";
     for (int i = 0; i < width; i++)
     { std::cout << "_"; }
     std::cout << "\n";
 
-    for (int i = 0; i < length - 2; i++)
+   /*for (int i = 0; i < length - 2; i++)
     {
         std::cout << "|";
         for (int j = 0; j < width; j++)
         { std::cout << "_"; }
         std::cout << "|\n";
 
-    }
+    } */
 
     std::cout << "|";
     for (int i = 0; i < width; i++)
     { std::cout << "_";}
     std::cout << "|\n";
-
+    std::cout << "\n";
 
 }
 
