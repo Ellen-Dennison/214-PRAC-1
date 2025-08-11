@@ -8,6 +8,10 @@ void CareTaker::add(Memento* shapes)//adds saved state to the list
     mementoList.push_back(shapes);//more like a queue since a state is added at the back, FIFO
 }
 
+int CareTaker::getSize(){
+    return mementoList.size();
+}
+
 Memento* CareTaker::getShape(int index)
 {
     return mementoList[index];

@@ -9,6 +9,7 @@ class CareTaker{
 
     public:
             CareTaker();
+            int getSize();
             void add(Memento* shape); //adding a memento to the list
             Memento* getShape(int index); //getting a specific memento from the list
             ~CareTaker();
