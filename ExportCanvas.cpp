@@ -11,15 +11,12 @@ void ExportCanvas::exportToFile ()
 void ExportCanvas::prepareCanvas()
 {
    std::cout << "Preparing your canvas\n";
-   canvas->getShape();
-    
+   //canvas->setShape();    
 }
 void ExportCanvas::renderElements()
 {
     std::cout << "Rendering your canvas\n";
-
 }
-
 
 ExportCanvas::~ExportCanvas()
 {

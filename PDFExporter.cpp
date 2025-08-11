@@ -4,5 +4,5 @@
 
 void PDFExporter::saveToFile()
 {
-    std::cout << "Your file is ready\n"; 
+    std::cout << "Your PDF file is ready\n"; 
 }
