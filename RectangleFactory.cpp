@@ -8,12 +8,13 @@ RectangleFactory::RectangleFactory(int length, int width, std::string colour, in
     this->colour = colour;
     this->position_x = position_x;
     this->position_y = position_y;
+    this->type = type;
 
 }
 
 Shape* RectangleFactory::createshape()
 {   
-    r1 = new Rectangle(this->length,this->width,this->colour,this->position_x,this->position_y);
+    r1 = new Rectangle(this->length,this->width,this->colour,this->position_x,this->position_y,this->type);
     return r1;
 }
 

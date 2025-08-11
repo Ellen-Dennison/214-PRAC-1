@@ -10,7 +10,7 @@ class RectangleFactory:public ShapeFactory
    public:
    virtual Shape* createshape();
    virtual void toString();
-   RectangleFactory(int length, int width, std::string colour, int position_x,int position_y);
+   RectangleFactory(int length, int width, std::string colour, int position_x,int position_y,std::string type);
    ~RectangleFactory(); //!
 
    private:
@@ -19,6 +19,7 @@ class RectangleFactory:public ShapeFactory
    std::string colour;
    int position_x;
    int position_y;
+   std::string type;
    Rectangle *r1;
 
       
