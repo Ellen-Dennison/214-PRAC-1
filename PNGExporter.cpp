@@ -1,4 +1,5 @@
 #include "PNGExporter.h"
+#include<iostream>
     
 void PNGExporter::saveToFile()
 {
