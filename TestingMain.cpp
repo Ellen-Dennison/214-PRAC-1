@@ -104,13 +104,13 @@ int main()
 
     //!TESTING THE TEMPLATE METHOD
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    std::string type;
+    std::string typ;
     ExportCanvas *ext;
     std:: cout << "what file type would you like to export to\n";
-    std::cin >> type;
-    if (type == "PDF")
+    std::cin >> typ;
+    if (typ == "PDF")
     { ext = new PDFExporter(); }
-    else if (type == "PNG")
+    else if (typ == "PNG")
     { ext = new PNGExporter(); }
     ext->exportToFile();
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
