@@ -12,7 +12,7 @@ SqaureFactory::SqaureFactory(int length, int width, std::string colour, int posi
 
 Shape* SqaureFactory::createshape()
 {
-    Square *s1 = new Square(this->length,this->width,this->colour,this->position_x,this->position_y);
+    s1 = new Square(this->length,this->width,this->colour,this->position_x,this->position_y);
     return s1;
 }
 
@@ -39,5 +39,13 @@ void SqaureFactory::toString()
     { std::cout << "_";}
     std::cout << "|\n";
 
+
+}
+
+SqaureFactory::~SqaureFactory()
+{   
+   
+    if(!NULL)
+    { delete s1;}
 
 }
