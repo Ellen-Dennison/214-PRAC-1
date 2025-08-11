@@ -15,6 +15,7 @@ int main()
     
     //Testing the memento part of the system
     //declaring
+
     Canvas* canvas1 = new Canvas();
     Shape* square = new Square(6,6,"yellow",8,8);
     CareTaker* storage = new CareTaker();
@@ -36,6 +37,8 @@ int main()
     }
     delete storage;
     delete canvas1;
+    
+
 
     
     //!TESTING THE FACTORIES

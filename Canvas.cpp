@@ -42,12 +42,6 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes->clone();
 }
 
-Canvas::Canvas()
-{
-   //shapes()
-}
-
-
 void Canvas::createFactory(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
 {
    if (kind == 'r')
@@ -74,8 +68,8 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
 
    }
 
-}*/
-// In Canvas.cpp
+}
+
 Canvas::Canvas() : shapes(nullptr) {}  // Initialize to nullptr
 
 Canvas::~Canvas(){
