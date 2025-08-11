@@ -9,7 +9,9 @@
 
 using namespace std;
 
-int main(){
+int main()
+{   
+    
     //Testing the memento part of the system
     Shape* shapes1 = new Rectangle(10,5,"green",3,6);
     Shape* shapes2 = new Square(3,8,"red",8,8);
@@ -47,7 +49,7 @@ int main(){
 
     cout<<"Second saved shape: "<<endl;
     canvas1.undoAction(list.getShape(1));
-   cout<<"Length: "<<canvas1.getShape()->length<<endl;
+    cout<<"Length: "<<canvas1.getShape()->length<<endl;
     cout<<"Width: "<<canvas1.getShape()->width<<endl;
     cout<<"Colour: "<<canvas1.getShape()->colour<<endl;
     cout<<"Position_x: "<<canvas1.getShape()->position_x<<endl;
@@ -55,19 +57,21 @@ int main(){
     cout<<"------------------------------------------------------------------------------------------------------------\n";
 
     //!TESTING THE FACTORIES
-    int length = 6;
-    int width = 6;
-    std::string colour = "blue";
-    int position_x = 2;
-    int position_y = 2;
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
-    Shape *new2 = new1->clone();
+    /* 
+        int length = 6;
+        int width = 6;
+        std::string colour = "blue";
+        int position_x = 2;
+        int position_y = 2;
+        Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
+        Shape *new2 = new1->clone();
 
-    delete new1;
-    delete new2;
+        delete new1;
+        delete new2;
 
-    Canvas *newCanvas = new Canvas('t',length,  width, colour, position_x, position_y, "Hello");
-    delete newCanvas;
+        Canvas *newCanvas = new Canvas('t',length,  width, colour, position_x, position_y, "Hello");
+        delete newCanvas; 
+    */
 
     return 0;
 }

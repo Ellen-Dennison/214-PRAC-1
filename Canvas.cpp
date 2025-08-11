@@ -6,8 +6,11 @@
 #include <iostream>
 using namespace std;
 
-void Canvas::setShape(Shape* shapes){//this function sets the current "state" of the object, unsaved
+void Canvas::setShape(Shape* shapes)
+{
+    //this function sets the current "state" of the object, unsaved
     this->shapes = shapes;
+    //this->shapes->clone(shapes);
 }
 
 Shape* Canvas::getShape(){//returns the current state of the object
@@ -25,9 +28,15 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
     this->shapes = prev->shapes;
 }
 
-Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
+Canvas::Canvas()
 {
    //shapes()
+   
+}
+
+
+void Canvas::createFacotory(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
+{
    if (kind == 'r')
    {
       RectangleFactory r1(length, width,colour,position_x,position_y) ;
@@ -49,4 +58,3 @@ Canvas::Canvas(char kind, int length, int width, string colour, int position_x,i
    }
 
 }
-
