@@ -6,6 +6,9 @@
 #include "Rectangle.h"
 #include "Square.h"
 #include "Textbox.h"
+#include "ExportCanvas.cpp"
+#include "PDFExporter.cpp"
+#include "PNGExporter.cpp"
 #include<string>
 #include<vector>
 using namespace std;
@@ -58,6 +61,17 @@ int main()
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y);
     newCanvas->createFactory('s',length,  width, colour, position_x, position_y);
     delete newCanvas; 
+
+    //!TESTING THE TEMPLATE METHOD
+    std::string type;
+    ExportCanvas *ext;
+    std:: cout << "what file type would you like to export to\n";
+    std::cin >> type;
+    if (type == "PDF")
+    { ext = new PDFExporter(); }
+    else if (type == "PNG")
+    { ext = new PNGExporter(); }
+    ext->exportToFile();
     
     return 0; 
 }
