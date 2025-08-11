@@ -2,8 +2,7 @@
 
 Shape* Rectangle::clone()
 {    
-    Rectangle *clone = new Rectangle(this->length,this->width,this->colour, this->position_x, this->position_y, this->type);
-    return clone;
+    return new Rectangle(*this);
 
 }
 

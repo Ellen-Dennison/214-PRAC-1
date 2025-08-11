@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {   
     //!TESTING THE PROTOTYPE
-    /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     int length = 6;
     int width = 6;
     std::string colour = "blue";
@@ -27,14 +27,21 @@ int main()
     int position_y = 2;
     std::string type = "Rectangle";
     Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y, type);
+    Square *new3 = new Square(length,  width, colour, position_x, position_y, "Square");
     Shape *new2 = new1->clone();
+    Shape *new4 = new3->clone();
     std::cout << "NEW1 COLOUR " << new1->getColour() << std::endl;
     std::cout << "NEW2 COLOUR AFTER USING THE CLONE METHOD " << new2->getColour() << std::endl;
+     
+    std::cout << "NEW3 TYPE " << new3->getType() << std::endl;
+    std::cout << "NEW4 TYPE AFTER USING THE CLONE METHOD " << new4->getType() << std::endl;
 
-    delete new1;
-    delete new2;
+
+    delete new1; delete new2;
+    delete new3; delete new4;
+    
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-*/
+
     //!Testing the memento part of the system
     //declaring
     Canvas* canvas1 = new Canvas();
@@ -91,9 +98,10 @@ int main()
         cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     }*/
 
-    delete storage;
-    delete canvas1;
+    //delete storage;
+    //delete canvas1;
     
+
     //!TESTING THE FACTORIES
     /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     Canvas *newCanvas = new Canvas();
