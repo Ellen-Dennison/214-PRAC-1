@@ -8,6 +8,7 @@ class SqaureFactory:public ShapeFactory
 
    public:
    SqaureFactory(int length, int width, std::string colour, int position_x,int position_y);
+   ~SqaureFactory();
    virtual Shape* createshape();
    virtual void toString();
 
@@ -17,6 +18,7 @@ class SqaureFactory:public ShapeFactory
    std::string colour;
    int position_x;
    int position_y;
+   Square *s1;
    
 };
 

@@ -1,5 +1,6 @@
 #include "TextboxFactory.h"
 
+
 TextboxFactory::TextboxFactory(int length, int width, std::string colour, int position_x,int position_y, std::string text)
 {
 
@@ -24,17 +25,18 @@ Shape* TextboxFactory::createshape()
 void TextboxFactory::toString()
 {
    
-    std::cout << "This is your Textbox\n";
-    std::cout << " ";
+    std::cout << "\nThis is your Textbox\n ";
+    //std::cout << " ";
     for (int i = 0; i < width; i++)
     { std::cout << "_"; }
-     std::cout << "\n";
+    std::cout << " \n";
          
     std::cout << "|";
     std::cout << this->text;
     for (int i = 0; i < width; i++)
     { std::cout << "";}
     std::cout << "|\n";
+    //std::cout << " ";
 
 
 }

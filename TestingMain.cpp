@@ -10,7 +10,9 @@
 #include<vector>
 using namespace std;
 
-int main(){
+int main()
+{   
+    
     //Testing the memento part of the system
     //declaring
     Canvas* canvas1 = new Canvas();
@@ -34,8 +36,25 @@ int main(){
     }
     delete storage;
     delete canvas1;
-    
 
-    //Testing the Factory Method of the system:
-    return 0;
+    
+    //!TESTING THE FACTORIES
+    int length = 6;
+    int width = 6;
+    std::string colour = "blue";
+    int position_x = 2;
+    int position_y = 2;
+    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
+    Shape *new2 = new1->clone();
+
+    delete new1;
+    delete new2;
+
+    Canvas *newCanvas = new Canvas();
+    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, "Hello");
+    newCanvas->createFactory('r',length,  width, colour, position_x, position_y);
+    newCanvas->createFactory('s',length,  width, colour, position_x, position_y);
+    delete newCanvas; 
+    
+    return 0; 
 }

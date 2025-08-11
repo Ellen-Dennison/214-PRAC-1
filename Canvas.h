@@ -9,14 +9,12 @@ class Canvas
     Shape* shapes;
 
     public:
-    
-    Canvas(char kind,int length, int width, std::string colour, int position_x,int position_y, std::string txt = " ");
     Canvas();
     void setShape(Shape* shapes);
     Shape* getShape();
     Memento* captureCurrent();
     void undoAction(Memento* prev);
-    ~Canvas();
+    void createFactory(char kind,int length, int width, std::string colour, int position_x,int position_y, std::string txt = " ");
 };
 
 #endif
