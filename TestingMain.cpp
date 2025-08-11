@@ -75,9 +75,6 @@ int main()
     delete storage;
     delete canvas1;
     
-
-
-    
     //!TESTING THE FACTORIES
     int length = 6;
     int width = 6;
@@ -106,7 +103,7 @@ int main()
     else if (type == "PNG")
     { ext = new PNGExporter(); }
     ext->exportToFile();
-    
+
     return 0; 
 
 
