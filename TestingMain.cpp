@@ -7,6 +7,7 @@
 #include "Square.h"
 #include "Textbox.h"
 #include<string>
+#include<vector>
 using namespace std;
 
 int main(){
@@ -34,5 +35,7 @@ int main(){
     delete storage;
     delete canvas1;
     
+
+    //Testing the Factory Method of the system:
     return 0;
 }

@@ -35,7 +35,10 @@ Memento* Canvas::captureCurrent() //saves the state
 
 void Canvas::undoAction(Memento* prev)//returns the last saved state
 {
-    this->shapes = prev->shapes;
+    if(shapes){
+        delete shapes;
+    }
+    this->shapes = prev->shapes->clone();
 }
 
 /*Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
@@ -50,7 +53,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
    }
    else if (kind == 's')
    {
-      SqaureFactory s1(length, width,colour,position_x,position_y) ;
+      SquareFactory s1(length, width,colour,position_x,position_y) ;
       s1.createshape();
       s1.toString();
    }
@@ -62,6 +65,9 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
    }
 
 }*/
-
 // In Canvas.cpp
 Canvas::Canvas() : shapes(nullptr) {}  // Initialize to nullptr
+
+Canvas::~Canvas(){
+    delete shapes;
+}

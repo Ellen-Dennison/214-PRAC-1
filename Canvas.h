@@ -16,6 +16,7 @@ class Canvas
     Shape* getShape();
     Memento* captureCurrent();
     void undoAction(Memento* prev);
+    ~Canvas();
 };
 
 #endif
