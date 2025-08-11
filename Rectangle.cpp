@@ -14,4 +14,5 @@ Rectangle::Rectangle(int length, int width, std::string colour, int position_x, 
     this->colour = colour;
     this->position_x = position_x;
     this->position_y = position_y;
+    
 }

@@ -7,10 +7,11 @@
 class RectangleFactory:public ShapeFactory
 {
    
+
    public:
+   RectangleFactory(int length, int width, std::string colour, int position_x,int position_y);
    virtual Shape* createshape();
    virtual void toString();
-   RectangleFactory(int length, int width, std::string colour, int position_x,int position_y);
 
    private:
    int length;

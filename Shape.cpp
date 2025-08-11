@@ -1,8 +1,8 @@
 #include "Shape.h"
 #include<string>
 
- int Shape::getLength()
- { return length; }
+  int Shape::getLength()
+  { return length; }
 
   int Shape::getWidth()
   { return width; }

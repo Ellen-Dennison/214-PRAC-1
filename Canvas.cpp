@@ -49,9 +49,17 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
       
    }
    else if (kind == 's')
-   {}
+   {
+      SqaureFactory s1(length, width,colour,position_x,position_y) ;
+      s1.createshape();
+      s1.toString();
+   }
    else if (kind == 't')
-   {}
+   {
+      TextboxFactory t1(length, width,colour,position_x,position_y,txt);
+      t1.createshape();
+      t1.toString();
+   }
 
 }*/
 
