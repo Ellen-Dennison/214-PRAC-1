@@ -2,11 +2,11 @@
 
 Shape* Rectangle::clone()
 {    
-    Rectangle *clone = new Rectangle(this->length,this->width,this->colour, this->position_x, this->position_y);
+    Rectangle *clone = new Rectangle(this->length,this->width,this->colour, this->position_x, this->position_y, this->type);
     return clone;
 
 }
 
-Rectangle::Rectangle(int length, int width, std::string colour, int position_x, int position_y,type)
+Rectangle::Rectangle(int length, int width, std::string colour, int position_x, int position_y,std::string type)
            : Shape(length,width,colour,position_x,position_y,type){}
            

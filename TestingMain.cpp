@@ -28,8 +28,8 @@ int main()
     std::string type = "Rectangle";
     Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y, type);
     Shape *new2 = new1->clone();
-    std::cout << "NEW1 COLOUR" << new1->getColour() << std::endl;
-    std::cout << "NEW2 COLOUR AFTER USING THE CLONE METHOD" << new2->getColour() << std::endl;
+    std::cout << "NEW1 COLOUR " << new1->getColour() << std::endl;
+    std::cout << "NEW2 COLOUR AFTER USING THE CLONE METHOD " << new2->getColour() << std::endl;
 
     delete new1;
     delete new2;

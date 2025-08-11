@@ -1,7 +1,7 @@
 #include "RectangleFactory.h"
 
 
-RectangleFactory::RectangleFactory(int length, int width, std::string colour, int position_x,int position_y)
+RectangleFactory::RectangleFactory(int length, int width, std::string colour, int position_x,int position_y, std::string type)
 {
     this->length = length;
     this->width = width;
