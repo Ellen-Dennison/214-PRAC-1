@@ -9,8 +9,8 @@ class Canvas
     Shape* shapes;
 
     public:
+    
     Canvas(char kind,int length, int width, std::string colour, int position_x,int position_y, std::string txt = " ");
-    //Canvas(char kind,int length, int width, std::string colour, int position_x,int position_y);
     Canvas();
     void setShape(Shape* shapes);
     Shape* getShape();
