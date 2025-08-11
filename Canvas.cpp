@@ -54,7 +54,7 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
    }
    else if (kind == 's')
    {
-      SquareFactory s1(length, width,colour,position_x,position_y) ;
+      SqaureFactory s1(length, width,colour,position_x,position_y) ;
       s1.createshape();
       s1.toString();
       //delete s1;
