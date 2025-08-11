@@ -6,12 +6,22 @@
 #include <iostream>
 using namespace std;
 
-void Canvas::setShape(Shape* shapes)
-{
-    //this function sets the current "state" of the object, unsaved
-    this->shapes = shapes;
-    //this->shapes->clone(shapes);
+void Canvas::setShape(Shape* newShape) {
+    if (!newShape) return;  // Safety check
+
+    if (!shapes) {
+        // If shapes is null, clone the new shape
+        shapes = newShape->clone();
+    } else {
+        // Otherwise, copy properties
+        shapes->setLength(newShape->getLength());
+        shapes->setWidth(newShape->getWidth());
+        shapes->setColour(newShape->getColour());
+        shapes->setPosition_x(newShape->getPosition_x());
+        shapes->setPosition_y(newShape->getPosition_y());
+    }
 }
+
 
 Shape* Canvas::getShape(){//returns the current state of the object
     return this->shapes;
@@ -29,6 +39,7 @@ void Canvas::undoAction(Memento* prev)//returns the last saved state
 }
 
 Canvas::Canvas()
+/*Canvas::Canvas(char kind, int length, int width, string colour, int position_x,int position_y)
 {
    //shapes()
    
@@ -57,4 +68,8 @@ void Canvas::createFactory(char kind, int length, int width, string colour, int 
       t1.toString();
    }
 
+}*/
+
+// In Canvas.cpp
+Canvas::Canvas() : shapes(nullptr) {}  // Initialize to nullptr
 }
