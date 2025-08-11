@@ -18,10 +18,24 @@ using namespace std;
 
 int main()
 {   
-    
-    //Testing the memento part of the system
-    //declaring
+    //!TESTING THE PROTOTYPE
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+    int length = 6;
+    int width = 6;
+    std::string colour = "blue";
+    int position_x = 2;
+    int position_y = 2;
+    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y);
+    Shape *new2 = new1->clone();
+    std::cout << "NEW1 COLOUR" << new1->getColour() << std::endl;
+    std::cout << "NEW2 COLOUR AFTER USING THE CLONE METHOD" << new2->getColour() << std::endl;
 
+    delete new1;
+    delete new2;
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+
+    //!Testing the memento part of the system
+    //declaring
     Canvas* canvas1 = new Canvas();
     Shape* square = new Square(6,6,"yellow",8,8,"square");
     Shape* rectangle = new Rectangle(7,8,"red",10,7,"rectangle");
@@ -78,28 +92,17 @@ int main()
     delete storage;
     delete canvas1;
     
-
-
-    
     //!TESTING THE FACTORIES
-    int length = 6;
-    int width = 6;
-    std::string colour = "blue";
-    int position_x = 2;
-    int position_y = 2;
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y,type);
-    Shape *new2 = new1->clone();
-
-    delete new1;
-    delete new2;
-
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     Canvas *newCanvas = new Canvas();
     newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type "Hello");
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y,type);
     newCanvas->createFactory('s',length,  width, colour, position_x, position_y,type);
     delete newCanvas;
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
 
     //!TESTING THE TEMPLATE METHOD
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     std::string type;
     ExportCanvas *ext;
     std:: cout << "what file type would you like to export to\n";
@@ -109,7 +112,8 @@ int main()
     else if (type == "PNG")
     { ext = new PNGExporter(); }
     ext->exportToFile();
-    
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+
     return 0; 
 
 
