@@ -1,8 +1,8 @@
 run: TestingMain
 	./TestingMain
 
-TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o
-	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o -o TestingMain
+TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o
+	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o -o TestingMain
 
 TestingMain.o: TestingMain.cpp Canvas.h Shape.h Memento.h CareTaker.h
 	g++ -c TestingMain.cpp
@@ -10,6 +10,9 @@ TestingMain.o: TestingMain.cpp Canvas.h Shape.h Memento.h CareTaker.h
 Rectangle.o: Rectangle.cpp Rectangle.h
 	g++ -c Rectangle.cpp
 
+RectangleFactory.o: RectangleFactory.cpp RectangleFactory.h
+	g++ -c RectangleFactory.cpp
+	
 Square.o: Square.cpp Square.h
 	g++ -c Square.cpp
 

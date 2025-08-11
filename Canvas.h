@@ -15,6 +15,7 @@ class Canvas
     Memento* captureCurrent();
     void undoAction(Memento* prev);
     void createFactory(char kind,int length, int width, std::string colour, int position_x,int position_y, std::string txt = " ");
+    ~Canvas();
 };
 
 #endif
