@@ -69,7 +69,7 @@ int main()
     delete new2;
 
     Canvas *newCanvas = new Canvas();
-    newCanvas->createFacotory('t',length,  width, colour, position_x, position_y, "Hello");
+    newCanvas->createFactory('t',length,  width, colour, position_x, position_y, "Hello");
     delete newCanvas; 
     
     return 0;

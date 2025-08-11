@@ -35,7 +35,7 @@ Canvas::Canvas()
 }
 
 
-void Canvas::createFacotory(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
+void Canvas::createFactory(char kind, int length, int width, string colour, int position_x,int position_y, std::string txt)
 {
    if (kind == 'r')
    {
