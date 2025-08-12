@@ -1,50 +1,30 @@
-run: TestingMain
-	./TestingMain
+# Compiler and flags
+CXX = g++
+CXXFLAGS = -Wall -Wextra -std=c++17 -fprofile-arcs -ftest-coverage
+LDFLAGS = -lgcov
 
-TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o SquareFactory.o TextboxFactory.o
-	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o SquareFactory.o TextboxFactory.o -o TestingMain
+# Source files
+SRCS = TestingMain.cpp Canvas.cpp CareTaker.cpp Memento.cpp Shape.cpp Rectangle.cpp Square.cpp Textbox.cpp RectangleFactory.cpp ExportCanvas.cpp PDFExporter.cpp PNGExporter.cpp SquareFactory.cpp TextboxFactory.cpp
+OBJS = $(SRCS:.cpp=.o)
+TARGET = myProgram
 
-TestingMain.o: TestingMain.cpp Canvas.h Shape.h Memento.h CareTaker.h
-	g++ -c TestingMain.cpp
+# Default target
+all: $(TARGET)
 
-Rectangle.o: Rectangle.cpp Rectangle.h
-	g++ -c Rectangle.cpp
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET) $(LDFLAGS)
 
-RectangleFactory.o: RectangleFactory.cpp RectangleFactory.h
-	g++ -c RectangleFactory.cpp
-	
-Square.o: Square.cpp Square.h
-	g++ -c Square.cpp
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-ExportCanvas.o: ExportCanvas.cpp ExportCanvas.h
-	g++ -c ExportCanvas.cpp
+# Run tests
+test: $(TARGET)
+	./$(TARGET)
 
-PDFExporter.o: PDFExporter.cpp PDFExporter.h
-	g++ -c PDFExporter.cpp
+# Generate coverage report
+cov: test
+	gcov $(SRCS)
 
-PNGExporter.o: PNGExporter.cpp PNGExporter.h
-	g++ -c PNGExporter.cpp
-
-SquareFactory.o: SquareFactory.cpp SquareFactory.h
-	g++ -c SquareFactory.cpp
-
-TextboxFactory.o: TextboxFactory.cpp TextboxFactory.h
-	g++ -c TextboxFactory.cpp
-
-Textbox.o: Textbox.cpp Textbox.h
-	g++ -c Textbox.cpp
-
-Canvas.o: Canvas.cpp Canvas.h
-	g++ -c Canvas.cpp
-
-Memento.o: Memento.cpp Memento.h
-	g++ -c Memento.cpp
-
-CareTaker.o: CareTaker.cpp CareTaker.h
-	g++ -c CareTaker.cpp
-
-Shape.o: Shape.cpp Shape.h
-	g++ -c Shape.cpp
-
+# Clean up
 clean:
-	rm *.o main
+	rm -f $(OBJS) $(TARGET) *.gcno *.gcda *.gcov

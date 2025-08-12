@@ -11,7 +11,7 @@ class RectangleFactory:public ShapeFactory
    virtual Shape* createshape();
    virtual void toString();
    RectangleFactory(int length, int width, std::string colour, int position_x,int position_y,std::string type);
-   ~RectangleFactory(); //!
+   virtual ~RectangleFactory(); //!
 
    private:
    int length;

@@ -9,7 +9,7 @@ class TextboxFactory:public ShapeFactory
 
    public:
    TextboxFactory(int length, int width, std::string colour, int position_x,int position_y,std::string type, std::string text);
-   ~TextboxFactory();
+   virtual ~TextboxFactory();
    virtual Shape* createshape();
    virtual void toString();
 

@@ -26,7 +26,7 @@ int main()
     int position_x = 2;
     int position_y = 2;
     std::string type = "Rectangle";
-    Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y, type);
+    /*Rectangle *new1 = new Rectangle(length,  width, colour, position_x, position_y, type);
     Square *new3 = new Square(length,  width, colour, position_x, position_y, "Square");
     Shape *new2 = new1->clone();
     Shape *new4 = new3->clone();
@@ -38,7 +38,7 @@ int main()
 
 
     delete new1; delete new2;
-    delete new3; delete new4;
+    delete new3; delete new4; */
     
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
 
@@ -85,7 +85,7 @@ int main()
 
     //getting previous state
     cout << "Memento list size: " << storage->getSize() << endl;
-    /*canvas1->undoAction(storage->getShape(0));
+    canvas1->undoAction(storage->getShape(0));
     cout<<"Previous state of the canvas: "<<endl;
     
     if (Shape* current = canvas1->getShape()) {
@@ -96,14 +96,14 @@ int main()
         cout << "Position_x: " << current->getPosition_x() << endl;
         cout << "Position_y: " << current->getPosition_y() << endl;
         cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    }*/
+    }
 
-    //delete storage;
-    //delete canvas1;
+    delete storage;
+    delete canvas1;
     
 
     //!TESTING THE FACTORIES
-    /*cout<<"---------------------------------------------------------------------------------------------------------------------\n";
+    cout<<"---------------------------------------------------------------------------------------------------------------------\n";
     Canvas *newCanvas = new Canvas();
     newCanvas->createFactory('t',length,  width, colour, position_x, position_y, type, "Hello");
     newCanvas->createFactory('r',length,  width, colour, position_x, position_y,type);
@@ -113,17 +113,16 @@ int main()
 
     //!TESTING THE TEMPLATE METHOD
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-    std::string typ;
+    std::string typ = "PDF";
     ExportCanvas *ext;
     std:: cout << "what file type would you like to export to\n";
-    std::cin >> typ;
     if (typ == "PDF")
     { ext = new PDFExporter(); }
     else if (typ == "PNG")
     { ext = new PNGExporter(); }
     ext->exportToFile();
     cout<<"---------------------------------------------------------------------------------------------------------------------\n";
-*/
+
     return 0; 
 
 

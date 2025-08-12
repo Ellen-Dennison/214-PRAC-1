@@ -1,0 +1,50 @@
+run: TestingMain
+	./TestingMain
+
+TestingMain: TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o SquareFactory.o TextboxFactory.o
+	g++ -std=c++98 TestingMain.o Canvas.o CareTaker.o Memento.o Shape.o Rectangle.o Square.o Textbox.o RectangleFactory.o ExportCanvas.o PDFExporter.o PNGExporter.o SquareFactory.o TextboxFactory.o -o TestingMain
+
+TestingMain.o: TestingMain.cpp Canvas.h Shape.h Memento.h CareTaker.h
+	g++ -c TestingMain.cpp
+
+Rectangle.o: Rectangle.cpp Rectangle.h
+	g++ -c Rectangle.cpp
+
+RectangleFactory.o: RectangleFactory.cpp RectangleFactory.h
+	g++ -c RectangleFactory.cpp
+	
+Square.o: Square.cpp Square.h
+	g++ -c Square.cpp
+
+ExportCanvas.o: ExportCanvas.cpp ExportCanvas.h
+	g++ -c ExportCanvas.cpp
+
+PDFExporter.o: PDFExporter.cpp PDFExporter.h
+	g++ -c PDFExporter.cpp
+
+PNGExporter.o: PNGExporter.cpp PNGExporter.h
+	g++ -c PNGExporter.cpp
+
+SquareFactory.o: SquareFactory.cpp SquareFactory.h
+	g++ -c SquareFactory.cpp
+
+TextboxFactory.o: TextboxFactory.cpp TextboxFactory.h
+	g++ -c TextboxFactory.cpp
+
+Textbox.o: Textbox.cpp Textbox.h
+	g++ -c Textbox.cpp
+
+Canvas.o: Canvas.cpp Canvas.h
+	g++ -c Canvas.cpp
+
+Memento.o: Memento.cpp Memento.h
+	g++ -c Memento.cpp
+
+CareTaker.o: CareTaker.cpp CareTaker.h
+	g++ -c CareTaker.cpp
+
+Shape.o: Shape.cpp Shape.h
+	g++ -c Shape.cpp
+
+clean:
+	rm *.o main
